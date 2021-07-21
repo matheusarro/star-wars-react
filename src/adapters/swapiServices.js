@@ -9,8 +9,8 @@ export const fetchPeoplePage = async (page = 1) => {
     const id = character.url.split('/');
     const charId = id[5];
 
-    const world = character.homeworld.split('/');
-    const worldId = !!world[5] ? world[5] : 'DESCONHECIDO';
+    const worldId = character.homeworld.split('/')[5];
+    //const worldId = !!world[5] ? world[5] : 'DESCONHECIDO';
 
     return ({
       id: charId,
@@ -42,7 +42,7 @@ export const fetchPeoplePage = async (page = 1) => {
   for (const char of characters) {
     for (const world of filteredWorldsInfo) {
       if (char.homeworld_id === world.id) {
-        char.homeworld = world.name.toUpperCase();
+        char.homeworld = world.name === 'unknown' ? 'DESCONHECIDO' : world.name.toUpperCase();
       }
     }
   }
