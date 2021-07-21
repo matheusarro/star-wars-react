@@ -40,7 +40,7 @@ const Navigation = () => {
           </Logo>
         </NavLink>
         <Menu>
-            <NavOption to='/people' activeStyle={{color: 'white'}}>PESSOAS</NavOption>
+            <NavOption to='/people' activeStyle={{color: 'white'}}>PERSONAGENS</NavOption>
             <NavOption to='/planets' activeStyle={{color: 'white'}}>PLANETAS</NavOption>
             <NavOption to='/starships' activeStyle={{color: 'white'}}>NAVES</NavOption>
             <NavOption to='/vehicles' activeStyle={{color: 'white'}}>VEÍCULOS</NavOption>
